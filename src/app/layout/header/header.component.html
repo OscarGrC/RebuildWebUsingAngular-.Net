@@ -1,0 +1,22 @@
+<header class="app-header">
+    <!-- Menú Principal -->
+    <p-menubar [model]="menuItems" class="app-header__main-menu">
+        <!-- Logo -->
+        <ng-template #start>
+            <img src="logo.png" alt="Logo Empresa" class="app-header__logo" />
+        </ng-template>
+
+        <ng-template #end>
+            <!-- Menú de Accesibilidad -->
+            <div class="card flex justify-center">
+                <p-menu #menu [model]="accessibilityItems" [popup]="true" />
+                <p-button (click)="menu.toggle($event)" icon="pi pi-cog" />
+            </div>
+        </ng-template>
+    </p-menubar>
+
+    <!-- Botón Hamburguesa (solo en móvil) -->
+    <button (click)="toggleMenu()" class="app-header__hamburger-menu" *ngIf="isMobile">
+        <i class="pi pi-bars"></i>
+    </button>
+</header>
