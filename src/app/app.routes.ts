@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { PruebaComponent } from './components/prueba/prueba.component';
 import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
