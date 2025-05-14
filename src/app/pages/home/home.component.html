@@ -1,13 +1,26 @@
 <div class="home">
     <div class="home__slogan">
-        Desde 1995 dedicados a alquiler, venta y reparación de carretillas elevadoras.
+        <p> Desde 1995 dedicados a alquiler, venta y reparación de carretillas elevadoras.</p>
     </div>
     <div class="home__videoContainer">
         <video class="home__videoContainer__video" autoplay="" muted="" playsinline="" loop=""
             src="https://madrilenademantenimiento.es/wp-content/uploads/2024/05/Secuencia-04c.mp4"></video>
     </div>
 
-    <p-carousel [value]="slides" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="5000">
+    <div class="home__firstext">
+        <p>
+            En <strong>Madrileña de Mantenimiento</strong>, empresa líder en <strong>venta, alquiler y reparación de
+                carretillas elevadoras en Madrid</strong>, ofrecemos soluciones profesionales para todo tipo de
+            maquinaria de elevación. Con más de 25 años de experiencia en el sector industrial, proporcionamos
+            <strong>servicio técnico especializado</strong>, repuestos originales y atención personalizada para
+            garantizar el máximo rendimiento de tus equipos. Confía en expertos en <strong>mantenimiento de carretillas
+                elevadoras</strong> para optimizar tu operativa diaria.
+        </p>
+    </div>
+
+
+    <p-carousel [value]="slides" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="5000"
+        [showNavigators]="false">
         <ng-template pTemplate="item" let-slide>
             <ng-container [ngSwitch]="slide.type">
 
@@ -20,22 +33,43 @@
                 <!-- Slide tipo servicio -->
                 <div *ngSwitchCase="'service'" class="carousel-slide service-slide">
                     <div class="service-slide__top">
-                        <h2 class="service-slide__top__title">{{ slide.title }}</h2>
+                        <h2>{{ slide.title }}</h2>
                         <img [src]="slide.image" alt="Logo principal" />
                     </div>
                     <div class="service-slide__bottom">
                         <img [src]="slide.image2" alt="Banner adicional" />
                     </div>
                 </div>
-                <!-- Slide tipo texto con botón -->
-                <div *ngSwitchCase="'texto'" class="carousel-slide text-slide">
-                    <h2>{{ slide.title }}</h2>
-                    <p>{{ slide.description }}</p>
-                    <button pButton label="Saber más"></button>
+                <!-- Slide tipo image -->
+                <div *ngSwitchCase="'image'" class="carousel-slide image-slide">
+                    <img [src]="slide.image" alt="Banner adicional" />
                 </div>
 
             </ng-container>
         </ng-template>
     </p-carousel>
-    <h1>Bienvenido a la página de inicio</h1>
+
+
+    <div class="home__firstext">
+        <p>
+            La calidad de nuestro servicio técnico y nuestra amplia experiencia en el sector nos han permitido
+            convertirnos en servicio oficial de carretillas Mitsubishi. En <strong>Madrileña de Mantenimiento</strong>
+            nos especializamos en
+            el mantenimiento, reparación y venta de carretillas elevadoras, ofreciendo soluciones eficientes, rápidas y
+            personalizadas. Nuestra colaboración oficial con Mitsubishi es una garantía adicional de confianza,
+            profesionalidad y compromiso con la excelencia.
+        </p>
+    </div>
+
+    <div class="carousel-slide service-slide home__oficialservice">
+        <div class="service-slide__top">
+            <h2>Servicio ofical de</h2>
+            <img src="logomitsu.png" alt="Logo principal" />
+        </div>
+        <div class="service-slide__bottom">
+            <img src="https://madrilenademantenimiento.es/wp-content/uploads/2023/09/channels4_banner-1024x170.jpg"
+                alt="Banner adicional" />
+        </div>
+        <button class="custom-button">Ver modelos</button>
+    </div>
 </div>

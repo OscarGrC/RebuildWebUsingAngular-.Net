@@ -19,17 +19,21 @@ export class HomeComponent {
     },
     {
       type: 'service',
-      title: 'Servicio ofical de:',
+      title: 'Servicio ofical de',
       image: 'logomitsu.png',
       image2: 'https://madrilenademantenimiento.es/wp-content/uploads/2023/09/channels4_banner-1024x170.jpg',
     },
     {
-      type: 'custom',
-      data: {
-        title: 'Servicio Técnico',
-        icon: 'pi pi-wrench',
-        content: 'Reparación especializada para todo tipo de carretillas elevadoras.'
-      },
+      type: 'image',
+      image: 'fre.png'
+    },
+    {
+      type: 'image',
+      image: 'manu.png'
+    },
+    {
+      type: 'image',
+      image: 'trans.png'
     }
   ];
 }
