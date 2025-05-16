@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { NuestrosServiciosComponent } from "../../components/nuestros-servicios/nuestros-servicios.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, CarouselModule, ButtonModule, TagModule],
+  imports: [CommonModule, CarouselModule, ButtonModule, TagModule, NuestrosServiciosComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.sass'
 })
